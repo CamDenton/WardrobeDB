@@ -89,3 +89,5 @@ c:\users\wecancodeit\documents\visual studio 2015\Projects\WardrobeWeb\WardrobeW
 c:\users\wecancodeit\documents\visual studio 2015\Projects\WardrobeWeb\WardrobeWeb\obj\Debug\WardrobeWeb.csprojResolveAssemblyReference.cache
 c:\users\wecancodeit\documents\visual studio 2015\Projects\WardrobeWeb\WardrobeWeb\obj\Debug\WardrobeWeb.dll
 c:\users\wecancodeit\documents\visual studio 2015\Projects\WardrobeWeb\WardrobeWeb\obj\Debug\WardrobeWeb.pdb
+c:\users\wecancodeit\documents\visual studio 2015\Projects\WardrobeWeb\WardrobeWeb\bin\EntityFramework.SqlServer.dll
+c:\users\wecancodeit\documents\visual studio 2015\Projects\WardrobeWeb\WardrobeWeb\bin\EntityFramework.SqlServer.xml
