@@ -14,6 +14,11 @@ namespace WardrobeWeb.Models
     
     public partial class Top
     {
+        public Top()
+        {
+            this.Outfits = new HashSet<Outfit>();
+        }
+    
         public int TopID { get; set; }
         public string TopName { get; set; }
         public string TopStyle { get; set; }
@@ -23,6 +28,6 @@ namespace WardrobeWeb.Models
         public string TopSeason { get; set; }
         public string TopOccasion { get; set; }
     
-        public virtual Outfit Outfit { get; set; }
+        public virtual ICollection<Outfit> Outfits { get; set; }
     }
 }

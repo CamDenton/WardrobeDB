@@ -44,7 +44,7 @@
     <NavigationProperty Name="Accessory" Relationship="Self.FK_Outfits_Accessories" FromRole="Outfits" ToRole="Accessories" />
     <NavigationProperty Name="Bottom" Relationship="Self.FK_Outfits_Bottoms" FromRole="Outfits" ToRole="Bottoms" />
     <NavigationProperty Name="Sho" Relationship="Self.FK_Outfits_Shoes" FromRole="Outfits" ToRole="Shoes" />
-    <NavigationProperty Name="Top" Relationship="Self.FK_Outfits_Tops" FromRole="Outfits" ToRole="Tops" />
+    <NavigationProperty Name="Top1" Relationship="WardrobeDBModel.FK_Outfits_Tops1" FromRole="Outfit" ToRole="Top" />
   </EntityType>
   <EntityType Name="Sho">
     <Key>
@@ -73,7 +73,7 @@
     <Property Name="TopImage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="TopSeason" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="TopOccasion" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="Outfit" Relationship="Self.FK_Outfits_Tops" FromRole="Tops" ToRole="Outfits" />
+    <NavigationProperty Name="Outfits" Relationship="WardrobeDBModel.FK_Outfits_Tops1" FromRole="Top" ToRole="Outfit" />
   </EntityType>
   <Association Name="FK_Outfits_Accessories">
     <End Role="Accessories" Type="Self.Accessory" Multiplicity="1" />
@@ -111,18 +111,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Outfits_Tops">
-    <End Role="Tops" Type="Self.Top" Multiplicity="1" />
-    <End Role="Outfits" Type="Self.Outfit" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="Tops">
-        <PropertyRef Name="TopID" />
-      </Principal>
-      <Dependent Role="Outfits">
-        <PropertyRef Name="OutfitsID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityContainer Name="WardrobeDBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Accessories" EntityType="Self.Accessory" />
     <EntitySet Name="Bottoms" EntityType="Self.Bottom" />
@@ -141,9 +129,21 @@
       <End Role="Shoes" EntitySet="Shoes" />
       <End Role="Outfits" EntitySet="Outfits" />
     </AssociationSet>
-    <AssociationSet Name="FK_Outfits_Tops" Association="Self.FK_Outfits_Tops">
-      <End Role="Tops" EntitySet="Tops" />
-      <End Role="Outfits" EntitySet="Outfits" />
+    <AssociationSet Name="FK_Outfits_Tops1" Association="WardrobeDBModel.FK_Outfits_Tops1">
+      <End Role="Top" EntitySet="Tops" />
+      <End Role="Outfit" EntitySet="Outfits" />
     </AssociationSet>
   </EntityContainer>
+  <Association Name="FK_Outfits_Tops1">
+    <End Type="WardrobeDBModel.Top" Role="Top" Multiplicity="1" />
+    <End Type="WardrobeDBModel.Outfit" Role="Outfit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Top">
+        <PropertyRef Name="TopID" />
+      </Principal>
+      <Dependent Role="Outfit">
+        <PropertyRef Name="TopID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

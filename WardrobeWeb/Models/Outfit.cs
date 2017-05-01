@@ -26,6 +26,6 @@ namespace WardrobeWeb.Models
         public virtual Accessory Accessory { get; set; }
         public virtual Bottom Bottom { get; set; }
         public virtual Sho Sho { get; set; }
-        public virtual Top Top { get; set; }
+        public virtual Top Top1 { get; set; }
     }
 }

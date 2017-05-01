@@ -17,7 +17,7 @@ namespace WardrobeWeb.Controllers
         // GET: Outfits
         public ActionResult Index()
         {
-            var outfits = db.Outfits.Include(o => o.Accessory).Include(o => o.Bottom).Include(o => o.Sho).Include(o => o.Top);
+            var outfits = db.Outfits.Include(o => o.Accessory).Include(o => o.Bottom).Include(o => o.Sho).Include(o => o.Top1);
             return View(outfits.ToList());
         }
 

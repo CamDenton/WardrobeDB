@@ -208,6 +208,7 @@
     <Content Include="Content\Images\powerring.jpg" />
     <Content Include="Content\Images\shoes.jpg" />
     <Content Include="Content\Images\SpacePants.jpg" />
+    <Content Include="Content\Images\wardrobe-systems-banner.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

@@ -13,7 +13,7 @@
         <AssociationConnector Association="WardrobeDBModel.FK_Outfits_Accessories" ManuallyRouted="false" />
         <AssociationConnector Association="WardrobeDBModel.FK_Outfits_Bottoms" ManuallyRouted="false" />
         <AssociationConnector Association="WardrobeDBModel.FK_Outfits_Shoes" ManuallyRouted="false" />
-        <AssociationConnector Association="WardrobeDBModel.FK_Outfits_Tops" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeDBModel.FK_Outfits_Tops1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
