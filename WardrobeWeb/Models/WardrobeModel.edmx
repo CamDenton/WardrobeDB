@@ -4,77 +4,77 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Alias="Self" Namespace="WardrobeDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008">
+    <Schema Namespace="WardrobeDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Accessories">
           <Key>
             <PropertyRef Name="AccessID" />
           </Key>
-          <Property Name="AccessID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="AccessName" Nullable="false" MaxLength="20" Type="nvarchar" />
-          <Property Name="AccessStyle" Nullable="false" MaxLength="20" Type="nvarchar" />
-          <Property Name="AccessColor" Nullable="false" MaxLength="20" Type="nvarchar" />
-          <Property Name="AccessType" Nullable="false" MaxLength="20" Type="nvarchar" />
-          <Property Name="AccessImage" Nullable="false" MaxLength="50" Type="nvarchar" />
-          <Property Name="AccessSeason" Nullable="false" MaxLength="20" Type="nvarchar" />
-          <Property Name="AccessOccasion" Nullable="false" MaxLength="20" Type="nvarchar" />
+          <Property Name="AccessID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AccessName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="AccessStyle" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="AccessColor" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="AccessType" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="AccessImage" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="AccessSeason" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="AccessOccasion" Type="nvarchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <EntityType Name="Bottoms">
           <Key>
             <PropertyRef Name="BottomsID" />
           </Key>
-          <Property Name="BottomsID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="BottomName" Nullable="false" MaxLength="20" Type="nvarchar" />
-          <Property Name="BottomStyle" Nullable="false" MaxLength="20" Type="nvarchar" />
-          <Property Name="BottomColor" Nullable="false" MaxLength="20" Type="nvarchar" />
-          <Property Name="BottomLength" Nullable="false" Type="int" />
-          <Property Name="BottomWaist" Nullable="false" Type="int" />
-          <Property Name="Image" Nullable="false" MaxLength="50" Type="nvarchar" />
-          <Property Name="BottomSeason" Nullable="false" MaxLength="20" Type="nvarchar" />
-          <Property Name="BottomOccasion" Nullable="false" MaxLength="20" Type="nvarchar" />
+          <Property Name="BottomsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BottomName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="BottomStyle" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="BottomColor" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="BottomLength" Type="int" Nullable="false" />
+          <Property Name="BottomWaist" Type="int" Nullable="false" />
+          <Property Name="Image" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="BottomSeason" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="BottomOccasion" Type="nvarchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <EntityType Name="Outfits">
           <Key>
             <PropertyRef Name="OutfitsID" />
           </Key>
-          <Property Name="OutfitsID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="OutfitName" Nullable="false" MaxLength="20" Type="nvarchar" />
-          <Property Name="TopID" Nullable="false" Type="int" />
-          <Property Name="BottomID" Nullable="false" Type="int" />
-          <Property Name="ShoesID" Nullable="false" Type="int" />
-          <Property Name="AccessoryID" Nullable="false" Type="int" />
-          <Property Name="OutfitSeason" Nullable="false" MaxLength="20" Type="nvarchar" />
-          <Property Name="OutfitOccasion" Nullable="false" MaxLength="20" Type="nvarchar" />
+          <Property Name="OutfitsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OutfitName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="TopID" Type="int" Nullable="false" />
+          <Property Name="BottomID" Type="int" Nullable="false" />
+          <Property Name="ShoesID" Type="int" Nullable="false" />
+          <Property Name="AccessoryID" Type="int" Nullable="false" />
+          <Property Name="OutfitSeason" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="OutfitOccasion" Type="nvarchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <EntityType Name="Shoes">
           <Key>
             <PropertyRef Name="ShoeID" />
           </Key>
-          <Property Name="ShoeID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="ShoeName" Nullable="false" MaxLength="10" Type="nchar" />
-          <Property Name="ShoeStyle" Nullable="false" MaxLength="20" Type="nvarchar" />
-          <Property Name="ShoeColor" Nullable="false" MaxLength="20" Type="nvarchar" />
-          <Property Name="ShoeSize" Nullable="false" MaxLength="20" Type="nvarchar" />
-          <Property Name="ShoeMaterial" Nullable="false" MaxLength="20" Type="nvarchar" />
-          <Property Name="ShoeImage" Nullable="false" MaxLength="20" Type="nvarchar" />
-          <Property Name="ShoeSeason" Nullable="false" MaxLength="20" Type="nvarchar" />
-          <Property Name="ShoeOccasion" Nullable="false" MaxLength="20" Type="nvarchar" />
+          <Property Name="ShoeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShoeName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ShoeStyle" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ShoeColor" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ShoeSize" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ShoeMaterial" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ShoeImage" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ShoeSeason" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ShoeOccasion" Type="nvarchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <EntityType Name="Tops">
           <Key>
             <PropertyRef Name="TopID" />
           </Key>
-          <Property Name="TopID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="TopName" Nullable="false" MaxLength="20" Type="nvarchar" />
-          <Property Name="TopStyle" Nullable="false" MaxLength="20" Type="nvarchar" />
-          <Property Name="TopColor" Nullable="false" MaxLength="20" Type="nvarchar" />
-          <Property Name="TopSize" Nullable="false" MaxLength="20" Type="nvarchar" />
-          <Property Name="TopImage" Nullable="false" MaxLength="50" Type="nvarchar" />
-          <Property Name="TopSeason" Nullable="false" MaxLength="20" Type="nvarchar" />
-          <Property Name="TopOccasion" Nullable="false" MaxLength="20" Type="nvarchar" />
+          <Property Name="TopID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TopName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="TopStyle" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="TopColor" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="TopSize" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="TopImage" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TopSeason" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="TopOccasion" Type="nvarchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <Association Name="FK_Outfits_Accessories">
-          <End Type="Self.Accessories" Multiplicity="1" Role="Accessories" />
-          <End Type="Self.Outfits" Multiplicity="*" Role="Outfits" />
+          <End Role="Accessories" Type="Self.Accessories" Multiplicity="1" />
+          <End Role="Outfits" Type="Self.Outfits" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Accessories">
               <PropertyRef Name="AccessID" />
@@ -85,8 +85,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Outfits_Bottoms">
-          <End Type="Self.Bottoms" Multiplicity="1" Role="Bottoms" />
-          <End Type="Self.Outfits" Multiplicity="*" Role="Outfits" />
+          <End Role="Bottoms" Type="Self.Bottoms" Multiplicity="1" />
+          <End Role="Outfits" Type="Self.Outfits" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Bottoms">
               <PropertyRef Name="BottomsID" />
@@ -97,8 +97,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Outfits_Shoes">
-          <End Type="Self.Shoes" Multiplicity="1" Role="Shoes" />
-          <End Type="Self.Outfits" Multiplicity="*" Role="Outfits" />
+          <End Role="Shoes" Type="Self.Shoes" Multiplicity="1" />
+          <End Role="Outfits" Type="Self.Outfits" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Shoes">
               <PropertyRef Name="ShoeID" />
@@ -109,8 +109,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Outfits_Tops">
-          <End Type="Self.Tops" Multiplicity="1" Role="Tops" />
-          <End Type="Self.Outfits" Multiplicity="*" Role="Outfits" />
+          <End Role="Tops" Type="Self.Tops" Multiplicity="1" />
+          <End Role="Outfits" Type="Self.Outfits" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Tops">
               <PropertyRef Name="TopID" />
@@ -127,20 +127,20 @@
           <EntitySet Name="Shoes" EntityType="Self.Shoes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tops" EntityType="Self.Tops" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Outfits_Accessories" Association="Self.FK_Outfits_Accessories">
-            <End EntitySet="Accessories" Role="Accessories" />
-            <End EntitySet="Outfits" Role="Outfits" />
+            <End Role="Accessories" EntitySet="Accessories" />
+            <End Role="Outfits" EntitySet="Outfits" />
           </AssociationSet>
           <AssociationSet Name="FK_Outfits_Bottoms" Association="Self.FK_Outfits_Bottoms">
-            <End EntitySet="Bottoms" Role="Bottoms" />
-            <End EntitySet="Outfits" Role="Outfits" />
+            <End Role="Bottoms" EntitySet="Bottoms" />
+            <End Role="Outfits" EntitySet="Outfits" />
           </AssociationSet>
           <AssociationSet Name="FK_Outfits_Shoes" Association="Self.FK_Outfits_Shoes">
-            <End EntitySet="Shoes" Role="Shoes" />
-            <End EntitySet="Outfits" Role="Outfits" />
+            <End Role="Shoes" EntitySet="Shoes" />
+            <End Role="Outfits" EntitySet="Outfits" />
           </AssociationSet>
           <AssociationSet Name="FK_Outfits_Tops" Association="Self.FK_Outfits_Tops">
-            <End EntitySet="Tops" Role="Tops" />
-            <End EntitySet="Outfits" Role="Outfits" />
+            <End Role="Tops" EntitySet="Tops" />
+            <End Role="Outfits" EntitySet="Outfits" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -198,12 +198,12 @@
             <PropertyRef Name="ShoeID" />
           </Key>
           <Property Name="ShoeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ShoeName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="ShoeName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ShoeStyle" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ShoeColor" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ShoeSize" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ShoeMaterial" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ShoeImage" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ShoeImage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ShoeSeason" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ShoeOccasion" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Outfits" Relationship="Self.FK_Outfits_Shoes" FromRole="Shoes" ToRole="Outfits" />
