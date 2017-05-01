@@ -9,67 +9,43 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoeName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoeStyle)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoeColor)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoeSize)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoeMaterial)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoeImage)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoeSeason)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShoeOccasion)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
+
+@foreach (var item in Model)
+
+{
+    <row>
+        <div class="col-xs-12, col-sm-12, col-md-6, col-lg-3">
+           <h3> @Html.DisplayNameFor(model => model.ShoeName)</h3>
             @Html.DisplayFor(modelItem => item.ShoeName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoeStyle)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoeColor)
-        </td>
-        <td>
+            </div>
+
+            
+        <div class="col-xs-12, col-sm-12, col-md-6, col-lg-3">
+           <h3> @Html.DisplayNameFor(model => model.ShoeSize)</h3>
             @Html.DisplayFor(modelItem => item.ShoeSize)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoeMaterial)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoeImage)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoeSeason)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShoeOccasion)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ShoeID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ShoeID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ShoeID })
-        </td>
-    </tr>
+            </div>
+
+            
+        <div class="col-xs-12, col-sm-12, col-md-6, col-lg-3">
+            <h3>
+                @Html.DisplayNameFor(model => model.ShoeSeason)</h3>
+                @Html.DisplayFor(modelItem => item.ShoeSeason)
+</div>
+            
+        <div class="col-xs-12, col-sm-12, col-md-6, col-lg-3">
+            <h3>
+                @Html.DisplayNameFor(model => model.ShoeOccasion)</h3>
+                @Html.DisplayFor(modelItem => item.ShoeOccasion)
+</div>
+            
+        <div class="col-xs-12, col-sm-12, col-md-6, col-lg-3">
+            @Html.ActionLink("Edit", "Edit", new { id = item.ShoeID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ShoeID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ShoeID })
+            </div>
+        </row>
+    
 }
 
-</table>
+

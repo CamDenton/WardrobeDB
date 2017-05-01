@@ -9,67 +9,49 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.TopName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TopStyle)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TopColor)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TopSize)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TopImage)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TopSeason)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TopOccasion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Outfit.OutfitName)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
+
+@foreach (var item in Model)
+{
+    <row>
+        <div class="col-xs-12, col-sm-12, col-md-6, col-lg-3">
+
+            <h3>@Html.DisplayNameFor(model => model.TopName)</h3>
             @Html.DisplayFor(modelItem => item.TopName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TopStyle)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TopColor)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TopSize)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TopImage)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TopSeason)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TopOccasion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Outfit.OutfitName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.TopID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.TopID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.TopID })
-        </td>
-    </tr>
-}
+        </div>
 
-</table>
+        <div class="col-xs-12, col-sm-12, col-md-6, col-lg-3">
+            <h3> @Html.DisplayNameFor(model => model.TopSize)</h3>
+            @Html.DisplayFor(modelItem => item.TopSize)
+        </div>
+
+        <div class="col-xs-12, col-sm-12, col-md-6, col-lg-3">
+            <h3> @Html.DisplayNameFor(model => model.TopSeason)</h3>
+            @Html.DisplayFor(modelItem => item.TopSeason)
+        </div>
+
+        <div class="col-xs-12, col-sm-12, col-md-6, col-lg-3">
+            <h3> @Html.DisplayNameFor(model => model.TopOccasion)</h3>
+            @Html.DisplayFor(modelItem => item.TopOccasion)
+        </div>
+        <div class="col-xs-12, col-sm-12, col-md-6, col-lg-3">
+            @Html.ActionLink("Edit", "Edit", new { id = item.TopID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.TopID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.TopID })
+        </div>
+
+    </row>
+
+    <row>
+        <div class="col-xs-12, col-sm-12, col-md-12, col-lg-12">
+            </div>
+        </row>
+
+
+
+
+
+
+            }
+
+
